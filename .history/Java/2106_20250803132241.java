@@ -19,12 +19,11 @@ class Solution {
         
     }
 
-    public boolean valid(int[][] fruits, int left, int right, int start, int k) {
-        int leftPos = fruits[left][0];
-        int rightPos = fruits[right][0];
-        int goalLeftFirst = Math.abs(start - leftPos) + (rightPos - leftPos);
-        int goalrightFirst = Math.abs(start - rightPos) + (rightPos - leftPos);
+    public boolean valid(int[][] fruits,int left,int right,int start,int k){
+        int leftPos=fruits[left][0];
+        int rightPos=fruits[right][0];
+        int goalLeftFirst=Math.abs(start-leftPos)+(rightPos-leftPos);
+        int goalrightFirst=Math.abs(start-rightPos)+(rightPos-leftPos);
         return Math.min(goalLeftFirst, goalrightFirst) <= k;
     }
-    
 }
